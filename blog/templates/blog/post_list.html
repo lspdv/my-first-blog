@@ -7,9 +7,18 @@
 			<h1>Hello world!</h1>
 			<strong>Je to shit!</strong>
 			
-		</div>
+	{% for post in posts %}
+		{{post}}
+	{% endfor %}
 
-		<div>
+	{% for post in posts %}
+    	<div>
+       		<p>published: {{ post.published_date }}</p>
+       		<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaks }}</p>
+    	</div>
+	{% endfor %}
+
             <h1><a href="">Nevim, nevim, nevim</a></h1>
         </div>
 
